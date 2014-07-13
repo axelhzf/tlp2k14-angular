@@ -1,0 +1,13 @@
+{
+  "name": "rock-paper-scissors-lizard-spock",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "~1.2.19",
+    "underscore": "~1.6.0",
+    "jquery.gracket.js": "erik5388/jquery.gracket.js",
+    "jquery": "~2.1.1",
+    "angularLocalStorage": "~0.1.7",
+    "angular-cookies": "~1.2.19",
+    "angular-route": "~1.2.19"
+  }
+}

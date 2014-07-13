@@ -1,3 +1,4 @@
 .idea
 *.iml
 slides/node_modules/
+slides/out/

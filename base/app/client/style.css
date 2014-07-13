@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #262262;
+    color: #fff;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+a {
+    cursor: pointer;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 30px auto;
+    height: 200px;
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
+}
+
+input, select, button {
+    font-size: 24px;
+    border: 1px solid white;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+    color: #fff;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    -webkit-appearance: none;
+}
+
+.error {
+    color: #ff000d;
+}
+
+button {
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #585e95;
+}
+
+section {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #fff;
+}
+
+small {
+    font-size: 0.6em;
+}
+
+section.tournaments .tournament a {
+    display: block;
+    padding: 10px;
+}
+
+section.tournaments .tournament a:hover {
+    background-color: #585e95;
+}
+
+.play img {
+    width: 20%;
+    float: left;
+    cursor: pointer;
+    max-width: 100px;
+}
+
+.result > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.play1, .play2 {
+    width: 150px;
+}
+
+.play1 img, .play2 img{
+    width: 100%;
+}
+
+
+
+/* bracket */
+.g_gracket {
+    width: 100%;
+    padding: 55px 15px 5px;
+    line-height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.g_round {
+    float: left;
+    margin-right: 70px;
+}
+
+.g_game {
+    position: relative;
+    margin-bottom: 15px;
+    border-top: 0;
+    border-left: 0;
+}
+
+.g_gracket h3 {
+    min-width: 180px;
+    margin: 0;
+    padding: 10px 8px 8px;
+    font-size: 18px;
+    font-weight: normal;
+    color: #fff
+}
+
+/* @note: this width determinds node size */
+.g_team {
+    border: 1px solid #fff;
+}
+
+.g_round_label {
+    top: -5px;
+    font-weight: normal;
+    color: #ccc;
+    text-align: center;
+    font-size: 18px
+}
+
+.g_team:last-child {
+
+}
+
+.g_round:last-child {
+    margin-right: 20px;
+}
+
+.g_winner {
+
+}
+
+.g_winner .g_team {
+    background: none;
+}
+
+.g_current {
+    cursor: pointer;
+    background: #585e95 !important;
+}
+
+/* custom colors*/
+.g_team_custom {
+    background: #444;
+    border-radius: 50px 50px 0 0;
+}
+
+.g_team_custom:last-child {
+    background: #777;
+    border-radius: 0 0 50px 50px;
+}
+
+.g_winner_custom .g_team_custom {
+    background: none;
+    border-radius: 50px;
+}
+
+.g_winner_custom {
+    background: #444;
+    border-radius: 50px;
+}
+
+.g_current_custom {
+    cursor: pointer;
+    background: #900 !important;
+}
+
+.g_gracket .g_team_custom h3 {
+    font-weight: bold;
+    padding: 30px;
+    text-shadow: 0 2px 1px #222222;
+    text-transform: uppercase;
+}
+
+.g_game_custom {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+/* secondary-bracket */
+.container-secondary {
+    position: relative;
+    overflow: hidden;
+}
+
+.secondary-bracket {
+    bottom: 40px;
+    left: 802px;
+    position: absolute;
+    width: 500px;
+}
+
+.container-secondary h4 {
+    color: #CCCCCC;
+    font-weight: normal;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 55px;
+    z-index: 9999;
+}
+
+.secondary-bracket .g_round_label {
+    top: -25px;
+}
+
+.secondary-bracket > div {
+    padding-top: 35px;
+}
