@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>reveal.js - The HTML Presentation Framework</title>
+  <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+  <meta name="author" content="Hakim El Hattab">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="css/reveal.min.css">
+  <link id="theme" rel="stylesheet" href="css/theme/default.css">
+  <link rel="stylesheet" href="angular.css">
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+</head>
+<div class="reveal">
+  <!-- Any section element inside of this container is displayed as a slide-->
+  <div class="slides">
+    <section data-background="images/portada-angular.jpg" class="intro">
+      <h1>DESARROLLO WEB CON UN GRAN ANGULAR(.JS)</h1>
+      <p><small><a href='http://axelhzf.com'>Axel Hernández Ferrera</a> / <a href="http://twitter.com/axelhzf">@axelhzf</a></small></p>
+    </section>
+    <section>
+      <h2>¿Quién soy?</h2>
+      <p>Axel Hernández Ferrera</p>
+      <p><a href='http://axelhzf.com' target="_blank">axelhzf.com</a></p>
+      <p><a href="http://twitter.com/axelhzf" target="_blank">@axelhzf</a></p>
+    </section>
+    <section>
+      <h2>¿Dónde trabajo?</h2>
+      <p><img src="images/digitalnoise.svg"></p>
+    </section>
+    <section>
+      <h2>Anteriormente en la TLP</h2>
+      <p><a href="http://axelhzf.com/chat" target="_blank">Backbone.js - Chat</a></p>
+      <p><a href="http://axelhzf.com/node-multiplayer-snake" target="_blank">Node.js - Realtime multiplayer game</a></p>
+    </section>
+    <section>
+      <h2>JS-training</h2>
+      <p><a href="http://axelhzf.com/js-training-doc/" target="_blank">JavaScript: De principante a experto</a></p>
+    </section>
+    <section>
+      <h2>MVC Battle</h2>
+      <p><img src="images/mvc-battle.jpg"></p>
+    </section>
+    <section>
+      <h2>MVC Trends</h2><script type="text/javascript" src="//www.google.com/trends/embed.js?hl=en-US&q=angularjs,+ember.js,+backbonejs&date=8/2011+25m&cmpt=q&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=800&h=500"></script>
+    </section>
+    <section>
+      <p><img src="images/angularjs-logo-large.png"></p>
+    </section>
+    <section>
+      <h2>¿Qué es angular?</h2>
+      <p>AngularJS is a structural framework for dynamic web apps. It lets you use HTML as your template language and lets you extend HTML's syntax to express your application's components clearly and succinctly. Angular's data binding and dependency injection eliminate much of the code you currently have to write. And it all happens within the browser, making it an ideal partner with any server technology.</p>
+    </section>
+    <section>
+      <h2>Características</h2>
+      <p>
+        <ul>
+          <li>Data binding, as in {{}}</li>
+          <li>DOM control structures for repeating/hiding DOM fragments.</li>
+          <li>Support for forms and form validation.</li>
+          <li>Attaching code-behind to DOM elements.</li>
+          <li>Grouping of HTML into reusable components.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <h2>Getting started</h2><a class="jsbin-embed" href="http://jsbin.com/komiv/1/embed?html,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+    </section>
+    <section>
+      <h2>Bindings</h2>
+      <p><img src="images/ng-binding-one.png"><img src="images/ng-binding-two.png"></p>
+    </section>
+    <section>
+      <h2>Bindings</h2><a class="jsbin-embed" href="http://jsbin.com/jaxuteto/1/embed?html,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+    </section>
+    <section>
+      <h2>Controllers</h2>
+      <p>
+        <ul>
+          <li>ng-controller</li>
+          <li>$scope permite compartir variables entre la vista y la aplicación</li>
+          <li>Los controladores no tienen acceso para modificar el DOM</li>
+        </ul>
+      </p>
+    </section>
+    <section><a class="jsbin-embed" href="http://jsbin.com/fihageki/2/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script></section>
+    <section>
+      <h2>Controllers - Buenas prácticas</h2>
+      <p>
+        Mantener los controladores lo más pequeños posibles. Extraer toda la lógica a servicios para que se pueda reutilizar
+        en diferentes partes de la aplicación.
+      </p>
+    </section>
+    <section>
+      <h2>Compartir datos entre controladores</h2>
+      <p>
+        <ul>
+          <li>Servicios o factorias</li>
+          <li>Definición de singletons dentro del contexto de la aplicación</li>
+          <li>Inyección de dependencias</li>
+        </ul>
+      </p>
+    </section>
+    <section><a class="jsbin-embed" href="http://jsbin.com/bobipami/1/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script></section>
+    <section>
+      <h2>Filters</h2>
+      <p>
+        <ul>
+          <li>Se utilizan para formatear valores a la hora de mostrárselos a los usuarios</li>
+          <li><a href="https://docs.angularjs.org/api/ng/filter">Built-in filters</a></li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <h2>Filters</h2><a class="jsbin-embed" href="http://jsbin.com/baxicaki/1/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+    </section>
+    <section>
+      <h2>Directives</h2>
+      <p>Las directivas son marcas en elementos del DOM (atributos, elementos o classes CSS) que le indican al compilador de html de angular que tiene añadir comportamiento en ese elemento o incluso que debe transformar ese elemento y sus hijos en otro.</p>
+    </section>
+    <section>
+      <h2>Directives</h2>
+      <p>Las directivas son una de las partes más importantes de angular y es lo que nos va a permitir crear componentes reutilizables que podremos reutilizar a lo largo de la aplicación. Entender las directivas es algo clave para poder sacarle todo el potencial a angular</p>
+    </section>
+    <section>
+      <h2>Directives</h2>
+      <pre><code><my-dir></my-dir>
+<span my-dir="exp"></span>
+<!-- directive: my-dir exp -->
+<span class="my-dir: exp;"></span></code></pre>
+    </section>
+    <section>
+      <h2>Directives</h2>
+      <pre><code><a href="img/{{username}}.jpg">Hello {{username}}!</a></code></pre>
+      <pre><code><a ng-href="img/{{username}}.jpg">Hello {{username}}!</a></code></pre>
+      <pre><code><svg><circle cx="{{cx}}"></circle></svg></code></pre>
+      <pre><code><svg><circle ng-attr-cx="{{cx}}"></circle></svg></code></pre>
+    </section>
+    <section>
+      <h2>Directives</h2><a class="jsbin-embed" href="http://jsbin.com/qiwon/1/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+    </section>
+    <section>
+      <h2>Directives - Restrict</h2>
+      <p>
+        <ul>
+          <li>A - Attribute name (Default)</li>
+          <li>E - Elements</li>
+          <li>C - Class name</li>
+          <li>M - Comentarios</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <h2>Directives - Restrict</h2>
+      <p>Los valores se pueden combinar de forma que podríamos utilizar un valor tipo AEC.</p>
+      <p>¿Cuando deberíamos utilizar cada uno de los valores? En el caso de que estemos creando componentes nuevos, deberíamos utilizar E. En el caso de que estemos decorando de alguna forma elementos que ya existen, deberíamos utilizar A.</p>
+    </section>
+    <section>
+      <h2>Directives - Scope</h2><a class="jsbin-embed" href="http://jsbin.com/leted/1/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+    </section>
+    <section>
+      <h2>Directives - Scope</h2>
+      <p>Por defecto las directivas tienen acceso a las variables definidas en el scope.</p>
+      <p>Depender de variables ya definidas en el scope puede llevar a errores. Además el nombre de la variable debe coincidir exactamente en todos los scopes donde vamos a utilizar la directiva.</p>
+      <p>La buena práctica es utilizar scope aislados</p>
+    </section>
+    <section>
+      <h2>Directives - Scope</h2><a class="jsbin-embed" href="http://jsbin.com/leted/2/embed?html,js,console,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+    </section>
+    <section>
+      <h2>Directives - Binding</h2>
+      <p>Naming</p>
+      <pre><code>scope : { customerInfo: "=info" }</code></pre>
+    </section>
+    <section>
+      <h2>Directives - Binding</h2>
+      <p>
+        <ul>
+          <li><strong>@</strong> - Se copia el valor del atributo como un string</li>
+          <li><strong>=</strong> - Binding bidireccional</li>
+          <li><strong>&</strong> - Pasar una función del scope padre para que se llame mas adelante</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <h2>Directives - DOM Access</h2><a class="jsbin-embed" href="http://jsbin.com/vivew/1/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+    </section>
+    <section>
+      <h2>Directives - Transclude</h2><a class="jsbin-embed" href="http://jsbin.com/rapiji/1/embed?html,css,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+    </section>
+    <section>
+      <h2>Directives - Require</h2><a class="jsbin-embed" href="http://jsbin.com/hiwuv/3/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+    </section>
+    <section>
+      <h2>Route</h2><a class="jsbin-embed" href="http://jsbin.com/tosux/1/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+    </section>
+    <section>
+      <h2>$watch</h2><a class="jsbin-embed" href="http://jsbin.com/volab/1/embed?html,js,console,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+    </section>
+    <section>
+      <h2>$apply</h2><a class="jsbin-embed" href="http://jsbin.com/nulux/1/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+    </section>
+    <section>
+      <h2>Rock-paper-scissors-lizard-spock</h2>
+      <div><img src="images/app-logo.png"></div>
+      <div><a href="http://lizard-spock.herokuapp.com" target="_blank">DEMO</a></div>
+    </section>
+    <section>
+      <h2>Rock-paper-scissors-lizard-spock</h2>
+      <p><img src="images/app-1.png"></p>
+    </section>
+    <section>
+      <h2>Rock-paper-scissors-lizard-spock</h2>
+      <p><img src="images/app-2.png"></p>
+    </section>
+    <section>
+      <h2>Rock-paper-scissors-lizard-spock</h2>
+      <p><img src="images/app-3.png"></p>
+    </section>
+    <section>
+      <h2>Rock-paper-scissors-lizard-spock</h2>
+      <p><img src="images/app-4.png"></p>
+    </section>
+    <section>
+      <h2>Rock-paper-scissors-lizard-spock</h2>
+      <p><img src="images/app-5.png"></p>
+    </section>
+    <section>
+      <h2>Rock-paper-scissors-lizard-spock</h2>
+      <p><img src="images/app-6.png"></p>
+    </section>
+  </div>
+</div>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+<script src="index.js"></script>
