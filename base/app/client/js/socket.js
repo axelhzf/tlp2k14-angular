@@ -28,7 +28,12 @@ angular.module("app").factory("socket", function ($location) {
 
   socket.bindToScope = function ($scope) {
     $scope.state = "name";
+    $scope.tournaments = [
+      {id: 1, name: "Torneo1", maxUsers:4, users: [{name: "u1"}, {name: "u2"}]},
+      {id: 2, name: "Torneo2", maxUsers:4, users: [{name: "u1"}, {name: "u2"}]}
+    ];
     $scope.tournament = {
+      id: 3,
       name: "Torneo de la muerte",
       maxUsers: 4,
       users: [

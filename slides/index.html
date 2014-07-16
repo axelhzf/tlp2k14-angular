@@ -350,27 +350,33 @@ npm start</code></pre>
 </pre>
     </section>
     <section>
-      <h2>Tournament Wait</h2><pre>
+      <h2>Tournament Wait</h2>
+      <p><pre>
   <code>
-    <section class="tournament-wait">
       <h1>{{tournament.name}}</h1>
-
       <h3>Waiting for other players {{tournament.users.length}} / {{tournament.maxUsers}}</h3>
-
       <div ng-repeat="user in tournament.users">{{user.name}}</div>
-
+  </code>
+</pre>
+      </p>
     </section>
+    <section>
+      <h2>Tournament Chart</h2><pre>
+  <code>
+    <h1>{{tournament.name}}</h1>
+    <gracket bracket="tournament.brackets"></gracket>
+    <button ng-click="nextMatch()">Next match</button>
   </code>
 </pre>
     </section>
     <section>
       <h2>Tournament Chart</h2><pre>
   <code>
-    <section>
-      <h1>{{tournament.name}}</h1>
-      <gracket bracket="tournament.brackets"></gracket>
-      <button ng-click="nextMatch()">Next match</button>
-    </section>
+    angular.module("app").controller("ChartController", function ($scope, socket) {
+      $scope.nextMatch = function () {
+        socket.emit("tournament:nextMatch");
+      };
+    });
   </code>
 </pre>
     </section>

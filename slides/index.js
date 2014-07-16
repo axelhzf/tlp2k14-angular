@@ -4,7 +4,7 @@ Reveal.initialize({
   controls: false,
   progress: false,
   history: true,
-  center: true,
+  center: false,
 
   theme: "default", // available themes are in /css/theme
   transition: "none", // default/cube/page/concave/zoom/linear/fade/none
