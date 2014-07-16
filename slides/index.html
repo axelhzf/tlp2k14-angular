@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8">
-  <title>reveal.js - The HTML Presentation Framework</title>
+  <title>DESARROLLO WEB CON UN GRAN ANGULAR(.JS) - @axelhzf</title>
   <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
   <meta name="author" content="Hakim El Hattab">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -16,8 +16,10 @@
   <!-- Any section element inside of this container is displayed as a slide-->
   <div class="slides">
     <section data-background="images/portada-angular.jpg" class="intro">
-      <h1>DESARROLLO WEB CON UN GRAN ANGULAR(.JS)</h1>
-      <p><small><a href='http://axelhzf.com'>Axel Hernández Ferrera</a> / <a href="http://twitter.com/axelhzf">@axelhzf</a></small></p>
+      <div class="fill">
+        <h1>DESARROLLO WEB CON UN GRAN ANGULAR(.JS) <br/></h1>
+        <h2><a href="http://twitter.com/axelhzf">@axelhzf</a></h2>
+      </div>
     </section>
     <section>
       <h2>¿Quién soy?</h2>
@@ -27,7 +29,7 @@
     </section>
     <section>
       <h2>¿Dónde trabajo?</h2>
-      <p><img src="images/digitalnoise.svg"></p>
+      <p><a href="http://digitalnoise.es" target="_blank"><img src="images/digitalnoise.svg" class="white-bg"></a></p>
     </section>
     <section>
       <h2>Anteriormente en la TLP</h2>
@@ -46,7 +48,7 @@
       <h2>MVC Trends</h2><script type="text/javascript" src="//www.google.com/trends/embed.js?hl=en-US&q=angularjs,+ember.js,+backbonejs&date=8/2011+25m&cmpt=q&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=800&h=500"></script>
     </section>
     <section>
-      <p><img src="images/angularjs-logo-large.png"></p>
+      <p><a href="https://angularjs.org/" target="_blank"><img src="images/angularjs-logo-large.png" class="white-bg"></a></p>
     </section>
     <section>
       <h2>¿Qué es angular?</h2>
@@ -59,20 +61,23 @@
           <li>Data binding, as in {{}}</li>
           <li>DOM control structures for repeating/hiding DOM fragments.</li>
           <li>Support for forms and form validation.</li>
-          <li>Attaching code-behind to DOM elements.</li>
           <li>Grouping of HTML into reusable components.</li>
         </ul>
       </p>
     </section>
-    <section>
-      <h2>Getting started</h2><a class="jsbin-embed" href="http://jsbin.com/komiv/1/embed?html,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+    <section data-jsbin="komiv/1/embed?html,output">
+      <h2>Getting started</h2>
     </section>
     <section>
-      <h2>Bindings</h2>
-      <p><img src="images/ng-binding-one.png"><img src="images/ng-binding-two.png"></p>
+      <h2>One Way Data Binding (Backbone)</h2>
+      <p><img src="images/ng-binding-one.png"></p>
     </section>
     <section>
-      <h2>Bindings</h2><a class="jsbin-embed" href="http://jsbin.com/jaxuteto/1/embed?html,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+      <h2>Two Way Data Binding (Angular)</h2>
+      <p><img src="images/ng-binding-two.png"></p>
+    </section>
+    <section data-jsbin="jaxuteto/1/embed?html,output">
+      <h2>Binding</h2>
     </section>
     <section>
       <h2>Controllers</h2>
@@ -84,7 +89,7 @@
         </ul>
       </p>
     </section>
-    <section><a class="jsbin-embed" href="http://jsbin.com/fihageki/2/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script></section>
+    <section data-jsbin="fihageki/2/embed?html,js,output"></section>
     <section>
       <h2>Controllers - Buenas prácticas</h2>
       <p>
@@ -96,13 +101,13 @@
       <h2>Compartir datos entre controladores</h2>
       <p>
         <ul>
-          <li>Servicios o factorias</li>
+          <li>Service o factory</li>
           <li>Definición de singletons dentro del contexto de la aplicación</li>
           <li>Inyección de dependencias</li>
         </ul>
       </p>
     </section>
-    <section><a class="jsbin-embed" href="http://jsbin.com/bobipami/1/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script></section>
+    <section data-jsbin="bobipami/1/embed?html,js,output"></section>
     <section>
       <h2>Filters</h2>
       <p>
@@ -112,8 +117,8 @@
         </ul>
       </p>
     </section>
-    <section>
-      <h2>Filters</h2><a class="jsbin-embed" href="http://jsbin.com/baxicaki/1/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+    <section data-jsbin="baxicaki/1/embed?html,js,output">
+      <h2>Filters</h2>
     </section>
     <section>
       <h2>Directives</h2>
@@ -137,8 +142,8 @@
       <pre><code><svg><circle cx="{{cx}}"></circle></svg></code></pre>
       <pre><code><svg><circle ng-attr-cx="{{cx}}"></circle></svg></code></pre>
     </section>
-    <section>
-      <h2>Directives</h2><a class="jsbin-embed" href="http://jsbin.com/qiwon/1/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+    <section data-jsbin="qiwon/1/embed?html,js,output">
+      <h2>Directives</h2>
     </section>
     <section>
       <h2>Directives - Restrict</h2>
@@ -154,10 +159,13 @@
     <section>
       <h2>Directives - Restrict</h2>
       <p>Los valores se pueden combinar de forma que podríamos utilizar un valor tipo AEC.</p>
-      <p>¿Cuando deberíamos utilizar cada uno de los valores? En el caso de que estemos creando componentes nuevos, deberíamos utilizar E. En el caso de que estemos decorando de alguna forma elementos que ya existen, deberíamos utilizar A.</p>
     </section>
     <section>
-      <h2>Directives - Scope</h2><a class="jsbin-embed" href="http://jsbin.com/leted/1/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+      <h2>Directives - Restrict</h2>
+      <p>En el caso de que estemos creando componentes nuevos, deberíamos utilizar E. En el caso de que estemos decorando de alguna forma elementos que ya existen, deberíamos utilizar A.</p>
+    </section>
+    <section data-jsbin="leted/1/embed?html,js,output">
+      <h2>Directives - Scope</h2>
     </section>
     <section>
       <h2>Directives - Scope</h2>
@@ -165,8 +173,8 @@
       <p>Depender de variables ya definidas en el scope puede llevar a errores. Además el nombre de la variable debe coincidir exactamente en todos los scopes donde vamos a utilizar la directiva.</p>
       <p>La buena práctica es utilizar scope aislados</p>
     </section>
-    <section>
-      <h2>Directives - Scope</h2><a class="jsbin-embed" href="http://jsbin.com/leted/2/embed?html,js,console,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+    <section data-jsbin="leted/2/embed?html,js,console,output">
+      <h2>Directives - Scope</h2>
     </section>
     <section>
       <h2>Directives - Binding</h2>
@@ -183,23 +191,23 @@
         </ul>
       </p>
     </section>
-    <section>
-      <h2>Directives - DOM Access</h2><a class="jsbin-embed" href="http://jsbin.com/vivew/1/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+    <section data-jsbin="vivew/1/embed?html,js,output">
+      <h2>Directives - DOM Access</h2>
     </section>
-    <section>
-      <h2>Directives - Transclude</h2><a class="jsbin-embed" href="http://jsbin.com/rapiji/1/embed?html,css,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+    <section data-jsbin="rapiji/1/embed?html,css,js,output">
+      <h2>Directives - Transclude</h2>
     </section>
-    <section>
-      <h2>Directives - Require</h2><a class="jsbin-embed" href="http://jsbin.com/hiwuv/3/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+    <section data-jsbin="hiwuv/3/embed?html,js,output">
+      <h2>Directives - Require</h2>
     </section>
-    <section>
-      <h2>Route</h2><a class="jsbin-embed" href="http://jsbin.com/tosux/1/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+    <section data-jsbin="tosux/1/embed?html,js,output">
+      <h2>Route</h2>
     </section>
-    <section>
-      <h2>$watch</h2><a class="jsbin-embed" href="http://jsbin.com/volab/1/embed?html,js,console,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+    <section data-jsbin="volab/1/embed?html,js,console,output">
+      <h2>$watch</h2>
     </section>
-    <section>
-      <h2>$apply</h2><a class="jsbin-embed" href="http://jsbin.com/nulux/1/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+    <section data-jsbin="nulux/1/embed?html,js,output">
+      <h2>$apply</h2>
     </section>
     <section>
       <h2>Rock-paper-scissors-lizard-spock</h2>
@@ -237,12 +245,286 @@
       </p>
     </section>
     <section>
-      <h2>Socket.io
-        <p>El servidor se comunicará con los clientes a través de websockets.</p>
-      </h2>
+      <h2>Socket.io</h2>
+      <p>El servidor se comunicará con los clientes a través de websockets.</p>
+      <p>El fichero socket es el que hará la comunicación. Mientras hacemos el desarrollo utilizaremos un mock.</p>
+    </section>
+    <section>
+      <h2>State -> Route</h2><pre>
+  <code>
+    var app = angular.module("app", ["angularLocalStorage", "ngRoute"]);
+    app.config(function ($routeProvider) {
+      $routeProvider.when("/name", {
+        templateUrl: "templates/name.html",
+        controller: "NameController"
+      }).when("/tournaments", {
+        templateUrl: "templates/tournaments.html",
+        controller: "TournamentsController"
+      }).when("/tournament/wait", {
+        templateUrl: "templates/tournament-wait.html"
+      }).when("/tournament/chart", {
+        templateUrl: "templates/tournament-chart.html",
+        controller: "ChartController"
+      }).when("/match", {
+        templateUrl: "templates/match.html",
+        controller: "MatchController"
+      }).when("/tournament/winner", {
+        templateUrl: "templates/tournament-winner.html",
+        controller: "WinnerController"
+      })
+    });
+  </code>
+</pre>
+    </section>
+    <section>
+      <h2>Name</h2><pre>
+  <code>
+    <form ng-submit="sendName()">
+      <input type="text" name="name" ng-model="name" placeholder="username" autocomplete="off">
+    </form>
+    <div class="error" ng-if="error">{{error}}</div>
+  </code>
+</pre>
+    </section>
+    <section>
+      <h2>Name</h2><pre>
+  <code>
+    angular.module("app").controller("NameController", function ($scope, storage, socket) {
+      storage.bind($scope, "name");
+
+      if ($scope.name) {
+        socket.emit("user:add", $scope.name);
+      }
+
+      $scope.sendName = function () {
+        socket.emit("user:add", $scope.name);
+      };
+    });
+  </code>
+</pre>
+
+    </section>
+    <section>
+      <h2>Tournaments</h2><pre>
+  <code>
+    <div class="tournament" ng-repeat="tournament in tournaments">
+      <a ng-click="joinTournament(tournament)">
+        {{tournament.name}}
+        <small>({{tournament.users.length}} / {{tournament.maxUsers}})</small>
+      </a>
+    </div>
+    <hr>
+    <form ng-submit="createTournament(tournamentName, tournamentMaxUsers)">
+      <input type="text" name="tournamentName" ng-model="tournamentName" placeholder="name">
+      <select name="tournamentMaxUsers" ng-model="tournamentMaxUsers">
+        <option value="2">2 players</option>
+        <option value="4">4 players</option>
+        <option value="8">8 players</option>
+        <option value="16">16 players</option>
+        <option value="32">32 players</option>
+      </select>
+      <button>New tournament</button>
+    </form>
+  </code>
+</pre>
+    </section>
+    <section>
+      <h2>Tournaments</h2><pre>
+  <code>
+    angular.module("app").controller("TournamentsController", function ($scope, socket) {
+      $scope.tournamentMaxUsers = "2";
+      $scope.createTournament = function (name, maxUsers) {
+        socket.emit("tournament:add", {name: name, maxUsers: parseInt(maxUsers, 10)});
+      };
+      $scope.joinTournament = function (tournament) {
+        socket.emit("tournament:join", tournament.id);
+      }
+    });
+  </code>
+</pre>
+    </section>
+    <section>
+      <h2>Tournament Wait</h2><pre>
+  <code>
+    <section class="tournament-wait">
+      <h1>{{tournament.name}}</h1>
+
+      <h3>Waiting for other players {{tournament.users.length}} / {{tournament.maxUsers}}</h3>
+
+      <div ng-repeat="user in tournament.users">{{user.name}}</div>
+
+    </section>
+  </code>
+</pre>
+    </section>
+    <section>
+      <h2>Tournament Chart</h2><pre>
+  <code>
+    <section>
+      <h1>{{tournament.name}}</h1>
+      <gracket bracket="tournament.brackets"></gracket>
+      <button ng-click="nextMatch()">Next match</button>
+    </section>
+  </code>
+</pre>
+    </section>
+    <section>
+      <h2>Gracket</h2><pre>
+  <code>
+    angular.module("app").directive("gracket", function () {
+      return {
+        restrict: "E",
+        template: "<div></div>",
+        scope: {
+          bracket: "="
+        },
+        link: function (scope, element) {
+          var $element = $(element).find("div");
+          $element.gracket({
+            src: scope.bracket
+          });
+        }
+      }
+    });
+  </code>
+</pre>
+    </section>
+    <section>
+      <h2>Match</h2><pre>
+  <code>
+    <section class="match">
+      <div class="result">
+        <div class="play1">
+          {{activeMatch.user1.name}}
+          <img src="images/{{imagePlay1()}}.png">
+        </div>
+        <div>VS</div>
+        <div class="play2">
+          {{activeMatch.user2.name}}
+          <img src="images/{{imagePlay2()}}.png">
+        </div>
+      </div>
+
+      <div ng-if="showWinner()">
+        <div ng-if="activeMatch.winner">
+          <h1>{{activeMatch.winner.name}} wins</h1>
+        </div>
+        <div ng-if="!activeMatch.winner">
+          <h1>Draw</h1>
+        </div>
+      </div>
+
+      <div ng-if="showMovements()">
+        <h1>Make your movement</h1>
+
+        <div class="play">
+          <img ng-click="play('rock')" src="images/rock.png">
+          <img ng-click="play('paper')" src="images/paper.png">
+          <img ng-click="play('scissors')" src="images/scissors.png">
+          <img ng-click="play('lizard')" src="images/lizard.png">
+          <img ng-click="play('spock')" src="images/spock.png">
+        </div>
+      </div>
+    </section>
+  </code>
+</pre>
+    </section>
+    <section>
+      <h2>Match</h2><pre>
+  <code>
+    angular.module("app").controller("MatchController", function ($scope, socket) {
+
+      $scope.showMovements = function () {
+        return ($scope.activeMatch.user1.id === $scope.user.id && !$scope.activeMatch.play1) ||
+            ($scope.activeMatch.user2.id === $scope.user.id && !$scope.activeMatch.play2);
+      };
+
+      $scope.showWinner = function () {
+        return $scope.activeMatch.play1 && $scope.activeMatch.play2;
+      };
+
+      $scope.imagePlay1 = function () {
+        return $scope.activeMatch.play1 || "empty";
+      };
+
+      $scope.imagePlay2 = function () {
+        return $scope.activeMatch.play2 || "empty";
+      };
+
+      $scope.play = function (play) {
+        if ($scope.user.id === $scope.activeMatch.user1.id) {
+          $scope.activeMatch.play1 = play;
+        } else if ($scope.user.id === $scope.activeMatch.user2.id) {
+          $scope.activeMatch.play2 = play;
+        }
+        socket.emit("match:play", play);
+      }
+    });
+  </code>
+</pre>
+    </section>
+    <section>
+      <h2>Winner</h2><pre>
+  <code>
+    <div>
+      <h2>{{winner.name}} wins</h2>
+      <gracket bracket="tournament.brackets"></gracket>
+      <button ng-click="newTournament()">New tournament</button>
+    </div>
+  </code>
+</pre>
+    </section>
+    <section>
+      <h2>Winner</h2><pre>
+  <code>
+    angular.module("app").controller("WinnerController", function ($scope, socket) {
+      $scope.newTournament = function () {
+        socket.emit("tournament:newTournament");
+      }
+    });
+  </code>
+</pre>
+    </section>
+    <section>
+      <h2>Socket connect</h2><pre>
+  <code>
+    socket.bindToScope = function ($scope) {
+      function setToScope (obj) {
+        _.each(obj, function (value, key) {
+          $scope[key] = value;
+          if (key === "state") {
+            var path = value.replace(/:/, "/");
+            $location.path(path).replace();
+          }
+        });
+        $scope.$apply();
+      }
+      socket.on("set", setToScope);
+    };
+  </code>
+</pre>
+    </section>
+    <section>
+      <h2>Angular Dart</h2>
+      <p><a href="https://angulardart.org/" target="_blank">https://angulardart.org/</a></p>
+    </section>
+    <section>
+      <h2>El Futuro de angular</h2>
+      <p><a href="https://docs.google.com/presentation/d/1Gv-dvU-yy6WY7SiNJ9QRo9XayPS6N2jtgWezdRpoI04/present">https://docs.google.com/presentation/d/1Gv-dvU-yy6WY7SiNJ9QRo9XayPS6N2jtgWezdRpoI04/present</a>
+        <ul>
+          <li>ES6 modules</li>
+          <li>Web Components</li>
+          <li>Object.observe</li>
+          <li>Angular 2</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <h1>Gracias</h1>
     </section>
   </div>
 </div>
 <script src="lib/js/head.min.js"></script>
+<script src="lib/js/jquery.js"></script>
 <script src="js/reveal.min.js"></script>
 <script src="index.js"></script>

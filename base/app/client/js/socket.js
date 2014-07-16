@@ -81,8 +81,12 @@ app.factory("socket", function ($location) {
 
     var path = $scope.state.replace(/:/, "/");
     $location.path(path).replace();
-
   };
+
+  socket.emit = function (eventName) {
+    console.log("emit", eventName);
+  };
+
   return socket;
 
 });

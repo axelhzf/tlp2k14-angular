@@ -1,0 +1,22 @@
+<pre>
+  <code>
+    <div class="tournament" ng-repeat="tournament in tournaments">
+      <a ng-click="joinTournament(tournament)">
+        {{tournament.name}}
+        <small>({{tournament.users.length}} / {{tournament.maxUsers}})</small>
+      </a>
+    </div>
+    <hr>
+    <form ng-submit="createTournament(tournamentName, tournamentMaxUsers)">
+      <input type="text" name="tournamentName" ng-model="tournamentName" placeholder="name">
+      <select name="tournamentMaxUsers" ng-model="tournamentMaxUsers">
+        <option value="2">2 players</option>
+        <option value="4">4 players</option>
+        <option value="8">8 players</option>
+        <option value="16">16 players</option>
+        <option value="32">32 players</option>
+      </select>
+      <button>New tournament</button>
+    </form>
+  </code>
+</pre>

@@ -1,0 +1,17 @@
+<pre>
+  <code>
+    socket.bindToScope = function ($scope) {
+      function setToScope (obj) {
+        _.each(obj, function (value, key) {
+          $scope[key] = value;
+          if (key === "state") {
+            var path = value.replace(/:/, "/");
+            $location.path(path).replace();
+          }
+        });
+        $scope.$apply();
+      }
+      socket.on("set", setToScope);
+    };
+  </code>
+</pre>

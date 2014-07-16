@@ -15,11 +15,46 @@ Reveal.initialize({
 
   // Optional libraries used to extend on reveal.js
   dependencies: [
-    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+    { src: 'lib/js/classList.js', condition: function () {
+      return !document.body.classList;
+    } },
+    { src: 'plugin/markdown/marked.js', condition: function () {
+      return !!document.querySelector('[data-markdown]');
+    } },
+    { src: 'plugin/markdown/markdown.js', condition: function () {
+      return !!document.querySelector('[data-markdown]');
+    } },
+    { src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+      hljs.initHighlightingOnLoad();
+    } },
+    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
+      return !!document.body.classList;
+    } },
+    { src: 'plugin/notes/notes.js', async: true, condition: function () {
+      return !!document.body.classList;
+    } }
   ]
 });
+
+function setBin (el) {
+  var $el = $(el);
+  var url = $el.data("jsbin");
+  if (url) {
+    var embed = '<iframe src="http://jsbin.com/' + url + '" class="jsbin-embed" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 300px; height: 30px;"></iframe>';
+    $el.append(embed);
+    $(window).trigger("resize");
+  }
+}
+
+function removeBin (el) {
+  var $el = $(el);
+  $el.find(".jsbin-embed").remove();
+}
+
+Reveal.addEventListener('slidechanged', function (event) {
+  setBin(event.currentSlide);
+  removeBin(event.previousSlide);
+});
+
+
+setBin(Reveal.getCurrentSlide());

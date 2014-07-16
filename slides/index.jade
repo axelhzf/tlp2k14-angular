@@ -1,7 +1,7 @@
 doctype html
 head
   meta(charset='utf-8')
-  title reveal.js - The HTML Presentation Framework
+  title DESARROLLO WEB CON UN GRAN ANGULAR(.JS) - @axelhzf
   meta(name='description', content='A framework for easily creating beautiful presentations using HTML')
   meta(name='author', content='Hakim El Hattab')
   meta(name='apple-mobile-web-app-capable', content='yes')
@@ -16,10 +16,9 @@ head
   // Any section element inside of this container is displayed as a slide
   .slides
     section.intro(data-background="images/portada-angular.jpg")
-      h1 DESARROLLO WEB CON UN GRAN ANGULAR(.JS)
-      p
-        small
-          | <a href='http://axelhzf.com'>Axel Hernández Ferrera</a> / <a href="http://twitter.com/axelhzf">@axelhzf</a>
+      .fill
+        h1 DESARROLLO WEB CON UN GRAN ANGULAR(.JS) <br/>
+        h2 <a href="http://twitter.com/axelhzf">@axelhzf</a>
 
     section
       h2 ¿Quién soy?
@@ -30,7 +29,8 @@ head
     section
       h2 ¿Dónde trabajo?
       p
-        img(src="images/digitalnoise.svg")
+        a(href="http://digitalnoise.es", target="_blank")
+          img.white-bg(src="images/digitalnoise.svg")
 
     section
       h2 Anteriormente en la TLP
@@ -46,14 +46,20 @@ head
       h2 MVC Battle
       p
         img(src="images/mvc-battle.jpg")
+
     section
       h2 MVC Trends
       <script type="text/javascript" src="//www.google.com/trends/embed.js?hl=en-US&q=angularjs,+ember.js,+backbonejs&date=8/2011+25m&cmpt=q&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=800&h=500"></script>
+
     section
-      p: img(src="images/angularjs-logo-large.png")
+      p
+        a(href="https://angularjs.org/", target="_blank")
+          img.white-bg(src="images/angularjs-logo-large.png")
+
     section
       h2 ¿Qué es angular?
       p AngularJS is a structural framework for dynamic web apps. It lets you use HTML as your template language and lets you extend HTML's syntax to express your application's components clearly and succinctly. Angular's data binding and dependency injection eliminate much of the code you currently have to write. And it all happens within the browser, making it an ideal partner with any server technology.
+
     section
       h2 Características
       p
@@ -61,19 +67,24 @@ head
           li Data binding, as in {{}}
           li DOM control structures for repeating/hiding DOM fragments.
           li Support for forms and form validation.
-          li Attaching code-behind to DOM elements.
           li Grouping of HTML into reusable components.
-    section
+
+    section(data-jsbin="komiv/1/embed?html,output")
       h2 Getting started
-      <a class="jsbin-embed" href="http://jsbin.com/komiv/1/embed?html,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+
     section
-      h2 Bindings
+      h2 One Way Data Binding (Backbone)
       p
         img(src="images/ng-binding-one.png")
-        img(src="images/ng-binding-two.png")
+
     section
-      h2 Bindings
-      <a class="jsbin-embed" href="http://jsbin.com/jaxuteto/1/embed?html,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+      h2 Two Way Data Binding (Angular)
+      p
+        img(src="images/ng-binding-two.png")
+
+    section(data-jsbin="jaxuteto/1/embed?html,output")
+      h2 Binding
+
     section
       h2 Controllers
       p
@@ -81,8 +92,7 @@ head
           li ng-controller
           li $scope permite compartir variables entre la vista y la aplicación
           li Los controladores no tienen acceso para modificar el DOM
-    section
-      <a class="jsbin-embed" href="http://jsbin.com/fihageki/2/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+    section(data-jsbin="fihageki/2/embed?html,js,output")
 
     section
       h2 Controllers - Buenas prácticas
@@ -93,12 +103,11 @@ head
       h2 Compartir datos entre controladores
       p
         ul
-          li Servicios o factorias
+          li Service o factory
           li Definición de singletons dentro del contexto de la aplicación
           li Inyección de dependencias
 
-    section
-      <a class="jsbin-embed" href="http://jsbin.com/bobipami/1/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+    section(data-jsbin="bobipami/1/embed?html,js,output")
 
     section
       h2 Filters
@@ -107,9 +116,9 @@ head
           li Se utilizan para formatear valores a la hora de mostrárselos a los usuarios
           li
             a(href="https://docs.angularjs.org/api/ng/filter") Built-in filters
-    section
+    section(data-jsbin="baxicaki/1/embed?html,js,output")
       h2 Filters
-      <a class="jsbin-embed" href="http://jsbin.com/baxicaki/1/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+
     section
       h2 Directives
       p Las directivas son marcas en elementos del DOM (atributos, elementos o classes CSS) que le indican al compilador de html de angular que tiene añadir comportamiento en ese elemento o incluso que debe transformar ese elemento y sus hijos en otro.
@@ -124,6 +133,7 @@ head
           <span my-dir="exp"></span>
           <!-- directive: my-dir exp -->
           <span class="my-dir: exp;"></span>
+
     section
       h2 Directives
       pre <code><a href="img/{{username}}.jpg">Hello {{username}}!</a></code>
@@ -131,9 +141,10 @@ head
 
       pre <code><svg><circle cx="{{cx}}"></circle></svg></code>
       pre <code><svg><circle ng-attr-cx="{{cx}}"></circle></svg></code>
-    section
+
+    section(data-jsbin="qiwon/1/embed?html,js,output")
       h2 Directives
-      <a class="jsbin-embed" href="http://jsbin.com/qiwon/1/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+
     section
       h2 Directives - Restrict
       p
@@ -142,14 +153,18 @@ head
           li E - Elements
           li C - Class name
           li M - Comentarios
+
     section
       h2 Directives - Restrict
       p Los valores se pueden combinar de forma que podríamos utilizar un valor tipo AEC.
-      p ¿Cuando deberíamos utilizar cada uno de los valores? En el caso de que estemos creando componentes nuevos, deberíamos utilizar E. En el caso de que estemos decorando de alguna forma elementos que ya existen, deberíamos utilizar A.
 
     section
+      h2 Directives - Restrict
+      p En el caso de que estemos creando componentes nuevos, deberíamos utilizar E. En el caso de que estemos decorando de alguna forma elementos que ya existen, deberíamos utilizar A.
+
+    section(data-jsbin="leted/1/embed?html,js,output")
       h2 Directives - Scope
-      <a class="jsbin-embed" href="http://jsbin.com/leted/1/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+
 
     section
       h2 Directives - Scope
@@ -157,9 +172,9 @@ head
       p Depender de variables ya definidas en el scope puede llevar a errores. Además el nombre de la variable debe coincidir exactamente en todos los scopes donde vamos a utilizar la directiva.
       p La buena práctica es utilizar scope aislados
 
-    section
+    section(data-jsbin="leted/2/embed?html,js,console,output")
       h2 Directives - Scope
-      <a class="jsbin-embed" href="http://jsbin.com/leted/2/embed?html,js,console,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+
 
     section
       h2 Directives - Binding
@@ -176,29 +191,25 @@ head
           li <strong>=</strong> - Binding bidireccional
           li <strong>&</strong> - Pasar una función del scope padre para que se llame mas adelante
 
-    section
+    section(data-jsbin="vivew/1/embed?html,js,output")
       h2 Directives - DOM Access
-      <a class="jsbin-embed" href="http://jsbin.com/vivew/1/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
-    section
+
+    section(data-jsbin="rapiji/1/embed?html,css,js,output")
       h2 Directives - Transclude
-      <a class="jsbin-embed" href="http://jsbin.com/rapiji/1/embed?html,css,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
-    section
+
+    section(data-jsbin="hiwuv/3/embed?html,js,output")
       h2 Directives - Require
-      <a class="jsbin-embed" href="http://jsbin.com/hiwuv/3/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
-    section
+    section(data-jsbin="tosux/1/embed?html,js,output")
       h2 Route
-      <a class="jsbin-embed" href="http://jsbin.com/tosux/1/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
-    section
+    section(data-jsbin="volab/1/embed?html,js,console,output")
       h2 $watch
-      <a class="jsbin-embed" href="http://jsbin.com/volab/1/embed?html,js,console,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
-    section
+    section(data-jsbin="nulux/1/embed?html,js,output")
       h2 $apply
-      <a class="jsbin-embed" href="http://jsbin.com/nulux/1/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
     section
       h2 Rock-paper-scissors-lizard-spock
@@ -236,18 +247,85 @@ head
           a(href="") Descargar base
     section
       h2 Socket.io
-        p El servidor se comunicará con los clientes a través de websockets.
+      p El servidor se comunicará con los clientes a través de websockets.
+      p El fichero socket es el que hará la comunicación. Mientras hacemos el desarrollo utilizaremos un mock.
 
+    section
+      h2 State -> Route
+      include includes/state-route.html
 
+    section
+      h2 Name
+      include includes/name.html
 
+    section
+      h2 Name
+      include includes/name-2.html
 
+    section
+      h2 Tournaments
+      include includes/tournaments.html
 
+    section
+      h2 Tournaments
+      include includes/tournaments-2.html
+
+    section
+      h2 Tournament Wait
+      include includes/wait.html
+
+    section
+      h2 Tournament Chart
+      include includes/tournament-chart.html
+
+    section
+      h2 Gracket
+      include includes/gracket.html
+
+    section
+      h2 Match
+      include includes/match.html
+
+    section
+      h2 Match
+      include includes/match-2.html
+
+    section
+      h2 Winner
+      include includes/winner.html
+
+    section
+      h2 Winner
+      include includes/winner-2.html
+
+    section
+      h2 Socket connect
+      include includes/socket.html
+
+    section
+      h2 Angular Dart
+      p
+        a(href="https://angulardart.org/", target="_blank") https://angulardart.org/
+
+    section
+      h2 El Futuro de angular
+      p
+        a(href="https://docs.google.com/presentation/d/1Gv-dvU-yy6WY7SiNJ9QRo9XayPS6N2jtgWezdRpoI04/present") https://docs.google.com/presentation/d/1Gv-dvU-yy6WY7SiNJ9QRo9XayPS6N2jtgWezdRpoI04/present
+        ul
+          li ES6 modules
+          li Web Components
+          li Object.observe
+          li Angular 2
+
+    section
+      h1 Gracias
 
 
 
 
 
 script(src='lib/js/head.min.js')
+script(src='lib/js/jquery.js')
 script(src='js/reveal.min.js')
 script(src="index.js")
 

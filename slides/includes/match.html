@@ -1,0 +1,38 @@
+<pre>
+  <code>
+    <section class="match">
+      <div class="result">
+        <div class="play1">
+          {{activeMatch.user1.name}}
+          <img src="images/{{imagePlay1()}}.png">
+        </div>
+        <div>VS</div>
+        <div class="play2">
+          {{activeMatch.user2.name}}
+          <img src="images/{{imagePlay2()}}.png">
+        </div>
+      </div>
+
+      <div ng-if="showWinner()">
+        <div ng-if="activeMatch.winner">
+          <h1>{{activeMatch.winner.name}} wins</h1>
+        </div>
+        <div ng-if="!activeMatch.winner">
+          <h1>Draw</h1>
+        </div>
+      </div>
+
+      <div ng-if="showMovements()">
+        <h1>Make your movement</h1>
+
+        <div class="play">
+          <img ng-click="play('rock')" src="images/rock.png">
+          <img ng-click="play('paper')" src="images/paper.png">
+          <img ng-click="play('scissors')" src="images/scissors.png">
+          <img ng-click="play('lizard')" src="images/lizard.png">
+          <img ng-click="play('spock')" src="images/spock.png">
+        </div>
+      </div>
+    </section>
+  </code>
+</pre>

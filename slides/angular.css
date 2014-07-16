@@ -1,9 +1,30 @@
-.intro h1, .intro p {
+.intro .fill {
     background-color: rgba(0, 43, 54, 0.7);
+    padding: 30px 5px;
+}
+
+.intro h2 {
+    text-transform: none;
+}
+
+.reveal .intro a {
+    color: #eee8d5;
 }
 
 iframe {
     background-color: #fff;
     box-sizing: border-box;
     height: 500px !important;
+}
+
+[data-jsbin] {
+    min-height: 500px !important;
+}
+
+.white-bg {
+    background-color: #fff !important;
+}
+
+.reveal pre {
+ box-shadow: none;
 }

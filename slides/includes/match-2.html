@@ -1,0 +1,32 @@
+<pre>
+  <code>
+    angular.module("app").controller("MatchController", function ($scope, socket) {
+
+      $scope.showMovements = function () {
+        return ($scope.activeMatch.user1.id === $scope.user.id && !$scope.activeMatch.play1) ||
+            ($scope.activeMatch.user2.id === $scope.user.id && !$scope.activeMatch.play2);
+      };
+
+      $scope.showWinner = function () {
+        return $scope.activeMatch.play1 && $scope.activeMatch.play2;
+      };
+
+      $scope.imagePlay1 = function () {
+        return $scope.activeMatch.play1 || "empty";
+      };
+
+      $scope.imagePlay2 = function () {
+        return $scope.activeMatch.play2 || "empty";
+      };
+
+      $scope.play = function (play) {
+        if ($scope.user.id === $scope.activeMatch.user1.id) {
+          $scope.activeMatch.play1 = play;
+        } else if ($scope.user.id === $scope.activeMatch.user2.id) {
+          $scope.activeMatch.play2 = play;
+        }
+        socket.emit("match:play", play);
+      }
+    });
+  </code>
+</pre>
