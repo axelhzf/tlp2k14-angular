@@ -83,8 +83,8 @@ angular.module("app").factory("socket", function ($location) {
     $location.path(path).replace();
   };
 
-  socket.emit = function (eventName) {
-    console.log("emit", eventName);
+  socket.emit = function () {
+    console.log("emit", arguments);
   };
 
   return socket;
