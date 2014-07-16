@@ -98,6 +98,10 @@ section.tournaments .tournament a:hover {
 }
 
 
+.tournament-chart {
+    min-width: 100%;
+}
+
 
 /* bracket */
 .g_gracket {
