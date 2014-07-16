@@ -6,7 +6,7 @@ Reveal.initialize({
   history: true,
   center: true,
 
-  theme: "moon", // available themes are in /css/theme
+  theme: "default", // available themes are in /css/theme
   transition: "none", // default/cube/page/concave/zoom/linear/fade/none
 
   // Parallax scrolling
