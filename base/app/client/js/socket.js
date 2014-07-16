@@ -81,7 +81,9 @@ angular.module("app").factory("socket", function ($location) {
         name: "Axel"
       }
     };
-    $scope.winner = "PEPE";
+    $scope.winner = {
+      name: "PEPE"
+    };
 
 
     var path = $scope.state.replace(/:/, "/");
