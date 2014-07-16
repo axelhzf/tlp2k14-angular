@@ -15,7 +15,7 @@
   },
   "scripts": {
     "postinstall": "node_modules/.bin/bower install",
-    "run": "node app/server.js",
+    "start": "node app/server/server.js",
     "test": "mocha test/**/*.spec.js"
   }
 }

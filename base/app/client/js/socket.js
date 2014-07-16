@@ -1,4 +1,4 @@
-app.factory("socket", function ($location) {
+angular.module("app").factory("socket", function ($location) {
 
 //  CONEXIÓN CON EL SERVIDOR
 //  -------------------------
@@ -27,7 +27,7 @@ app.factory("socket", function ($location) {
   var socket = {};
 
   socket.bindToScope = function ($scope) {
-    $scope.state = "tournament:name";
+    $scope.state = "name";
     $scope.tournament = {
       name: "Torneo de la muerte",
       maxUsers: 4,
