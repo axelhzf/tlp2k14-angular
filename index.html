@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>DESARROLLO WEB CON UN GRAN ANGULAR(.JS) - @axelhzf</title>
+  <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+  <meta name="author" content="Hakim El Hattab">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="css/reveal.min.css">
+  <link id="theme" rel="stylesheet" href="css/theme/default.css">
+  <link rel="stylesheet" href="angular.css">
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+</head>
+<div class="reveal">
+  <!-- Any section element inside of this container is displayed as a slide-->
+  <div class="slides">
+    <section data-background="images/portada-angular.jpg" class="intro">
+      <div class="fill">
+        <h1>DESARROLLO WEB CON UN GRAN ANGULAR(.JS) <br/></h1>
+        <h2><a href="http://twitter.com/axelhzf">@axelhzf</a></h2>
+        <p><a href="http://lizard-spock.herokuapp.com/" target="_blank"> Demo</a> | <a href="https://github.com/axelhzf/rock-paper-scissors-lizard-spock" target="_blank"> Source</a></p>
+      </div>
+    </section>
+    <section>
+      <h2>¿Quién soy?</h2>
+      <p>Axel Hernández Ferrera</p>
+      <p><a href='http://axelhzf.com' target="_blank">axelhzf.com</a></p>
+      <p><a href="http://twitter.com/axelhzf" target="_blank">@axelhzf</a></p>
+    </section>
+    <section>
+      <h2>¿Dónde trabajo?</h2>
+      <p><a href="http://digitalnoise.es" target="_blank"><img src="images/digitalnoise.svg" class="white-bg"></a></p>
+    </section>
+    <section>
+      <h2>Anteriormente en la TLP</h2>
+      <p><a href="http://axelhzf.com/chat" target="_blank">Backbone.js - Chat</a></p>
+      <p><a href="http://axelhzf.com/node-multiplayer-snake" target="_blank">Node.js - Realtime multiplayer game</a></p>
+    </section>
+    <section>
+      <h2>JS-training</h2>
+      <p><a href="http://axelhzf.com/js-training-doc/" target="_blank">JavaScript: De principante a experto</a></p>
+    </section>
+    <section>
+      <h2>MVC Battle</h2>
+      <p><img src="images/mvc-battle.jpg"></p>
+    </section>
+    <section>
+      <h2>MVC Trends</h2><script type="text/javascript" src="//www.google.com/trends/embed.js?hl=en-US&q=angularjs,+ember.js,+backbonejs&date=8/2011+25m&cmpt=q&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=800&h=500"></script>
+    </section>
+    <section>
+      <p><a href="https://angularjs.org/" target="_blank"><img src="images/angularjs-logo-large.png" class="white-bg"></a></p>
+    </section>
+    <section>
+      <h2>¿Qué es angular?</h2>
+      <p>AngularJS is a structural framework for dynamic web apps. It lets you use HTML as your template language and lets you extend HTML's syntax to express your application's components clearly and succinctly. Angular's data binding and dependency injection eliminate much of the code you currently have to write. And it all happens within the browser, making it an ideal partner with any server technology.</p>
+    </section>
+    <section>
+      <h2>Características</h2>
+      <p>
+        <ul>
+          <li>Data binding, as in {{}}</li>
+          <li>DOM control structures for repeating/hiding DOM fragments.</li>
+          <li>Support for forms and form validation.</li>
+          <li>Grouping of HTML into reusable components.</li>
+        </ul>
+      </p>
+    </section>
+    <section data-jsbin="komiv/1/embed?html,output">
+      <h2>Getting started</h2>
+    </section>
+    <section>
+      <h2>One Way Data Binding (Backbone)</h2>
+      <p><img src="images/ng-binding-one.png"></p>
+    </section>
+    <section>
+      <h2>Two Way Data Binding (Angular)</h2>
+      <p><img src="images/ng-binding-two.png"></p>
+    </section>
+    <section data-jsbin="jaxuteto/1/embed?html,output">
+      <h2>Binding</h2>
+    </section>
+    <section>
+      <h2>Controllers</h2>
+      <p>
+        <ul>
+          <li>ng-controller</li>
+          <li>$scope permite compartir variables entre la vista y la aplicación</li>
+          <li>Los controladores no tienen acceso para modificar el DOM</li>
+        </ul>
+      </p>
+    </section>
+    <section data-jsbin="fihageki/2/embed?html,js,output"></section>
+    <section>
+      <h2>Controllers - Buenas prácticas</h2>
+      <p>
+        Mantener los controladores lo más pequeños posibles. Extraer toda la lógica a servicios para que se pueda reutilizar
+        en diferentes partes de la aplicación.
+      </p>
+    </section>
+    <section>
+      <h2>Compartir datos entre controladores</h2>
+      <p>
+        <ul>
+          <li>Service o factory</li>
+          <li>Definición de singletons dentro del contexto de la aplicación</li>
+          <li>Inyección de dependencias</li>
+        </ul>
+      </p>
+    </section>
+    <section data-jsbin="bobipami/1/embed?html,js,output"></section>
+    <section>
+      <h2>Filters</h2>
+      <p>
+        <ul>
+          <li>Se utilizan para formatear valores a la hora de mostrárselos a los usuarios</li>
+          <li><a href="https://docs.angularjs.org/api/ng/filter">Built-in filters</a></li>
+        </ul>
+      </p>
+    </section>
+    <section data-jsbin="baxicaki/1/embed?html,js,output">
+      <h2>Filters</h2>
+    </section>
+    <section>
+      <h2>Directives</h2>
+      <p>Las directivas son marcas en elementos del DOM (atributos, elementos o classes CSS) que le indican al compilador de html de angular que tiene añadir comportamiento en ese elemento o incluso que debe transformar ese elemento y sus hijos en otro.</p>
+    </section>
+    <section>
+      <h2>Directives</h2>
+      <p>Las directivas son una de las partes más importantes de angular y es lo que nos va a permitir crear componentes reutilizables que podremos reutilizar a lo largo de la aplicación. Entender las directivas es algo clave para poder sacarle todo el potencial a angular</p>
+    </section>
+    <section>
+      <h2>Directives</h2>
+      <pre><code><my-dir></my-dir>
+<span my-dir="exp"></span>
+<!-- directive: my-dir exp -->
+<span class="my-dir: exp;"></span></code></pre>
+    </section>
+    <section>
+      <h2>Directives</h2>
+      <pre><code><a href="img/{{username}}.jpg">Hello {{username}}!</a></code></pre>
+      <pre><code><a ng-href="img/{{username}}.jpg">Hello {{username}}!</a></code></pre>
+      <pre><code><svg><circle cx="{{cx}}"></circle></svg></code></pre>
+      <pre><code><svg><circle ng-attr-cx="{{cx}}"></circle></svg></code></pre>
+    </section>
+    <section data-jsbin="qiwon/1/embed?html,js,output">
+      <h2>Directives</h2>
+    </section>
+    <section>
+      <h2>Directives - Restrict</h2>
+      <p>
+        <ul>
+          <li>A - Attribute name (Default)</li>
+          <li>E - Elements</li>
+          <li>C - Class name</li>
+          <li>M - Comentarios</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <h2>Directives - Restrict</h2>
+      <p>Los valores se pueden combinar de forma que podríamos utilizar un valor tipo AEC.</p>
+    </section>
+    <section>
+      <h2>Directives - Restrict</h2>
+      <p>En el caso de que estemos creando componentes nuevos, deberíamos utilizar E. En el caso de que estemos decorando de alguna forma elementos que ya existen, deberíamos utilizar A.</p>
+    </section>
+    <section data-jsbin="leted/1/embed?html,js,output">
+      <h2>Directives - Scope</h2>
+    </section>
+    <section>
+      <h2>Directives - Scope</h2>
+      <p>Por defecto las directivas tienen acceso a las variables definidas en el scope.</p>
+      <p>Depender de variables ya definidas en el scope puede llevar a errores. Además el nombre de la variable debe coincidir exactamente en todos los scopes donde vamos a utilizar la directiva.</p>
+      <p>La buena práctica es utilizar scope aislados</p>
+    </section>
+    <section data-jsbin="leted/2/embed?html,js,console,output">
+      <h2>Directives - Scope</h2>
+    </section>
+    <section>
+      <h2>Directives - Binding</h2>
+      <p>Naming</p>
+      <pre><code>scope : { customerInfo: "=info" }</code></pre>
+    </section>
+    <section>
+      <h2>Directives - Binding</h2>
+      <p>
+        <ul>
+          <li><strong>@</strong> - Se copia el valor del atributo como un string</li>
+          <li><strong>=</strong> - Binding bidireccional</li>
+          <li><strong>&</strong> - Pasar una función del scope padre para que se llame mas adelante</li>
+        </ul>
+      </p>
+    </section>
+    <section data-jsbin="vivew/1/embed?html,js,output">
+      <h2>Directives - DOM Access</h2>
+    </section>
+    <section data-jsbin="rapiji/1/embed?html,css,js,output">
+      <h2>Directives - Transclude</h2>
+    </section>
+    <section data-jsbin="hiwuv/3/embed?html,js,output">
+      <h2>Directives - Require</h2>
+    </section>
+    <section data-jsbin="tosux/1/embed?html,js,output">
+      <h2>Route</h2>
+    </section>
+    <section data-jsbin="volab/1/embed?html,js,console,output">
+      <h2>$watch</h2>
+    </section>
+    <section data-jsbin="nulux/1/embed?html,js,output">
+      <h2>$apply</h2>
+    </section>
+    <section>
+      <h2>Rock-paper-scissors-lizard-spock</h2>
+      <div><img src="images/app-logo.png"></div>
+      <div><a href="http://lizard-spock.herokuapp.com" target="_blank">DEMO</a></div>
+    </section>
+    <section>
+      <h2>Rock-paper-scissors-lizard-spock</h2>
+      <p><img src="images/app-1.png"></p>
+    </section>
+    <section>
+      <h2>Rock-paper-scissors-lizard-spock</h2>
+      <p><img src="images/app-2.png"></p>
+    </section>
+    <section>
+      <h2>Rock-paper-scissors-lizard-spock</h2>
+      <p><img src="images/app-3.png"></p>
+    </section>
+    <section>
+      <h2>Rock-paper-scissors-lizard-spock</h2>
+      <p><img src="images/app-4.png"></p>
+    </section>
+    <section>
+      <h2>Rock-paper-scissors-lizard-spock</h2>
+      <p><img src="images/app-5.png"></p>
+    </section>
+    <section>
+      <h2>Rock-paper-scissors-lizard-spock</h2>
+      <p><img src="images/app-6.png"></p>
+    </section>
+    <section>
+      <h2>Rock-paper-scissors-lizard-spock</h2>
+      <p>
+        <div class="btn"><a href="https://github.com/axelhzf/tlp2k14-angular/releases/download/1.0/lizard-spock-base.zip">Descargar base</a></div>
+      </p>
+    </section>
+    <section>
+      <h2>Rock-paper-scissors-lizard-spock</h2>
+      <pre><code>npm install
+npm start</code></pre>
+    </section>
+    <section>
+      <h2>Socket.io</h2>
+      <p>El servidor se comunicará con los clientes a través de websockets.</p>
+      <p>El fichero socket es el que hará la comunicación. Mientras hacemos el desarrollo utilizaremos un mock.</p>
+    </section>
+    <section>
+      <h2>State -> Route</h2><pre>
+  <code>
+    var app = angular.module("app", ["angularLocalStorage", "ngRoute"]);
+    app.config(function ($routeProvider) {
+      $routeProvider.when("/name", {
+        templateUrl: "templates/name.html",
+        controller: "NameController"
+      }).when("/tournaments", {
+        templateUrl: "templates/tournaments.html",
+        controller: "TournamentsController"
+      }).when("/tournament/wait", {
+        templateUrl: "templates/tournament-wait.html"
+      }).when("/tournament/chart", {
+        templateUrl: "templates/tournament-chart.html",
+        controller: "ChartController"
+      }).when("/match", {
+        templateUrl: "templates/match.html",
+        controller: "MatchController"
+      }).when("/tournament/winner", {
+        templateUrl: "templates/tournament-winner.html",
+        controller: "WinnerController"
+      })
+    });
+  </code>
+</pre>
+    </section>
+    <section>
+      <h2>Name</h2><pre>
+  <code>
+    <form ng-submit="sendName()">
+      <input type="text" name="name" ng-model="name" placeholder="username" autocomplete="off">
+    </form>
+    <div class="error" ng-if="error">{{error}}</div>
+  </code>
+</pre>
+    </section>
+    <section>
+      <h2>Name</h2><pre>
+  <code>
+    angular.module("app").controller("NameController", function ($scope, storage, socket) {
+      storage.bind($scope, "name");
+
+      if ($scope.name) {
+        socket.emit("user:add", $scope.name);
+      }
+
+      $scope.sendName = function () {
+        socket.emit("user:add", $scope.name);
+      };
+    });
+  </code>
+</pre>
+
+    </section>
+    <section>
+      <h2>Tournaments</h2><pre>
+  <code>
+    <div class="tournament" ng-repeat="tournament in tournaments">
+      <a ng-click="joinTournament(tournament)">
+        {{tournament.name}}
+        <small>({{tournament.users.length}} / {{tournament.maxUsers}})</small>
+      </a>
+    </div>
+    <hr>
+    <form ng-submit="createTournament(tournamentName, tournamentMaxUsers)">
+      <input type="text" name="tournamentName" ng-model="tournamentName" placeholder="name">
+      <select name="tournamentMaxUsers" ng-model="tournamentMaxUsers">
+        <option value="2">2 players</option>
+        <option value="4">4 players</option>
+        <option value="8">8 players</option>
+        <option value="16">16 players</option>
+        <option value="32">32 players</option>
+      </select>
+      <button>New tournament</button>
+    </form>
+  </code>
+</pre>
+    </section>
+    <section>
+      <h2>Tournaments</h2><pre>
+  <code>
+    angular.module("app").controller("TournamentsController", function ($scope, socket) {
+      $scope.tournamentMaxUsers = "2";
+      $scope.createTournament = function (name, maxUsers) {
+        socket.emit("tournament:add", {name: name, maxUsers: parseInt(maxUsers, 10)});
+      };
+      $scope.joinTournament = function (tournament) {
+        socket.emit("tournament:join", tournament.id);
+      }
+    });
+  </code>
+</pre>
+    </section>
+    <section>
+      <h2>Tournament Wait</h2>
+      <p><pre>
+  <code>
+      <h1>{{tournament.name}}</h1>
+      <h3>Waiting for other players {{tournament.users.length}} / {{tournament.maxUsers}}</h3>
+      <div ng-repeat="user in tournament.users">{{user.name}}</div>
+  </code>
+</pre>
+      </p>
+    </section>
+    <section>
+      <h2>Tournament Chart</h2><pre>
+  <code>
+    <h1>{{tournament.name}}</h1>
+    <gracket bracket="tournament.brackets"></gracket>
+    <button ng-click="nextMatch()">Next match</button>
+  </code>
+</pre>
+    </section>
+    <section>
+      <h2>Tournament Chart</h2><pre>
+  <code>
+    angular.module("app").controller("ChartController", function ($scope, socket) {
+      $scope.nextMatch = function () {
+        socket.emit("tournament:nextMatch");
+      };
+    });
+  </code>
+</pre>
+    </section>
+    <section>
+      <h2>Gracket</h2><pre>
+  <code>
+    angular.module("app").directive("gracket", function () {
+      return {
+        restrict: "E",
+        template: "<div></div>",
+        scope: {
+          bracket: "="
+        },
+        link: function (scope, element) {
+          var $element = $(element).find("div");
+          $element.gracket({
+            src: scope.bracket
+          });
+        }
+      }
+    });
+  </code>
+</pre>
+    </section>
+    <section>
+      <h2>Match</h2><pre>
+  <code>
+
+    <div class="result">
+      <div class="play1">
+        {{activeMatch.user1.name}}
+        <img src="images/{{imagePlay1()}}.png">
+      </div>
+      <div>VS</div>
+      <div class="play2">
+        {{activeMatch.user2.name}}
+        <img src="images/{{imagePlay2()}}.png">
+      </div>
+    </div>
+
+    <div ng-if="showWinner()">
+      <div ng-if="activeMatch.winner">
+        <h1>{{activeMatch.winner.name}} wins</h1>
+      </div>
+      <div ng-if="!activeMatch.winner">
+        <h1>Draw</h1>
+      </div>
+    </div>
+
+    <div ng-if="showMovements()">
+      <h1>Make your movement</h1>
+
+      <div class="play">
+        <img ng-click="play('rock')" src="images/rock.png">
+        <img ng-click="play('paper')" src="images/paper.png">
+        <img ng-click="play('scissors')" src="images/scissors.png">
+        <img ng-click="play('lizard')" src="images/lizard.png">
+        <img ng-click="play('spock')" src="images/spock.png">
+      </div>
+    </div>
+
+  </code>
+</pre>
+    </section>
+    <section>
+      <h2>Match</h2><pre>
+  <code>
+    angular.module("app").controller("MatchController", function ($scope, socket) {
+
+      $scope.showMovements = function () {
+        return ($scope.activeMatch.user1.id === $scope.user.id && !$scope.activeMatch.play1) ||
+            ($scope.activeMatch.user2.id === $scope.user.id && !$scope.activeMatch.play2);
+      };
+
+      $scope.showWinner = function () {
+        return $scope.activeMatch.play1 && $scope.activeMatch.play2;
+      };
+
+      $scope.imagePlay1 = function () {
+        return $scope.activeMatch.play1 || "empty";
+      };
+
+      $scope.imagePlay2 = function () {
+        return $scope.activeMatch.play2 || "empty";
+      };
+
+      $scope.play = function (play) {
+        if ($scope.user.id === $scope.activeMatch.user1.id) {
+          $scope.activeMatch.play1 = play;
+        } else if ($scope.user.id === $scope.activeMatch.user2.id) {
+          $scope.activeMatch.play2 = play;
+        }
+        socket.emit("match:play", play);
+      }
+    });
+  </code>
+</pre>
+    </section>
+    <section>
+      <h2>Tournament Winner</h2><pre>
+  <code>
+    <div>
+      <h2>{{winner.name}} wins</h2>
+      <gracket bracket="tournament.brackets"></gracket>
+      <button ng-click="newTournament()">New tournament</button>
+    </div>
+  </code>
+</pre>
+    </section>
+    <section>
+      <h2>Winner</h2><pre>
+  <code>
+    angular.module("app").controller("WinnerController", function ($scope, socket) {
+      $scope.newTournament = function () {
+        socket.emit("tournament:newTournament");
+      }
+    });
+  </code>
+</pre>
+    </section>
+    <section>
+      <h2>Socket connect</h2><pre>
+  <code>
+    socket.bindToScope = function ($scope) {
+      function setToScope (obj) {
+        _.each(obj, function (value, key) {
+          $scope[key] = value;
+          if (key === "state") {
+            var path = value.replace(/:/, "/");
+            $location.path(path).replace();
+          }
+        });
+        $scope.$apply();
+      }
+      socket.on("set", setToScope);
+    };
+  </code>
+</pre>
+    </section>
+    <section>
+      <h2>Angular Dart</h2>
+      <p><a href="https://angulardart.org/" target="_blank">https://angulardart.org/</a></p>
+    </section>
+    <section>
+      <h2>El Futuro de angular</h2>
+      <p><a href="https://docs.google.com/presentation/d/1Gv-dvU-yy6WY7SiNJ9QRo9XayPS6N2jtgWezdRpoI04/present">https://docs.google.com/presentation/d/1Gv-dvU-yy6WY7SiNJ9QRo9XayPS6N2jtgWezdRpoI04/present</a>
+        <ul>
+          <li>ES6 modules</li>
+          <li>Web Components</li>
+          <li>Object.observe</li>
+          <li>Angular 2</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <h1>Gracias</h1>
+    </section>
+  </div>
+</div>
+<script src="lib/js/head.min.js"></script>
+<script src="lib/js/jquery.js"></script>
+<script src="js/reveal.min.js"></script>
+<script src="index.js"></script><script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31904298-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
